@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	letter-spacing: 1px;
+}
+
+/*html{
+	scroll-behavior: smooth; //It affects bcoz of double animation.
+}*/
+
+body{
+	background-color: #fff;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+}
+
+/*Headings---------------------------------------------------------------------------------*/
+h1{
+	font-size: 3em;
+	color: #f1c40f;
+}
+
+h2{
+	font-weight: 400;
+	padding-bottom: 10px;
+}
+
+h3{
+	width: 50px;
+	height: 2px;
+	background-color: #f1c40f;
+	margin: auto;
+	margin-bottom: 10px;
+	color: #fff;
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+	transition: color 0.5s;
+}
+
+a:hover{
+	color: #f1c40f;
+}
+
+/*Header Styling------------------------------------------------------------------------------*/
+header{
+	position: relative;
+	padding: 200px;
+	height: 475px; /*Height is necessay as nav bar will work good for all break-points*/
+	background-color: #000;
+	word-spacing: 3px;
+	letter-spacing: 2px;
+	font-family: 'Potta One', cursive;
+	color: #fff;
+	text-align: center;
+}
+
+header nav{
+	opacity: 0;
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 10vh;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 100px 0 100px;
+	border-bottom: 0.5px solid #333;
+	box-shadow: 2px -3px 13px 0px rgba(0,0,0,0.68);
+	-webkit-box-shadow: 2px -3px 13px 0px rgba(0,0,0,0.68);
+	-moz-box-shadow: 2px -3px 13px 0px rgba(0,0,0,0.68);
+}
+
+header nav ul li{
+	list-style: none;
+	display: inline;
+	margin-left: 10px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+}
+
+/*Main Styling------------------------------------------------------------------------------*/
+main{
+	text-align: center;
+	margin: 50px 0 50px 0;
+}
+
+main div{
+	padding: 20px 100px;
+}
+
+footer{
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	padding: 25px 0;
+}
+
+footer span:hover{
+	color: #f1c40f;
+	transition: color 0.5s 0.2s;
+}
+
+/*Media Queries-------------------------------------------------------------------*/
+@media only screen and (max-width: 992px){
+	body{
+		font-size: 15px;
+	}
+
+	header nav{
+		padding: 0 30px 0 30px;
+	}
+
+	main div{
+		padding: 20px 40px;
+	}
+}
+
+@media only screen and (max-width: 700px){
+	header{
+		padding: 100px; /*Padding-top affects to responsive layout bcoz other sides are taking default padding: 200px;*/
+	}
+
+	header nav{
+		justify-content: center;
+	}
+
+	header nav ul{
+		display: none;
+	}
+
+	h1{
+		font-size: 1.5em;
+	}
+}
+/*Note: We can also use transform: translayteY(-50px); with keyframes for falling effect to nav bar.*/
